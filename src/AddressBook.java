@@ -35,10 +35,12 @@ public class AddressBook {
     public static void main(String[] args) {
         BuddyInfo buddy1 = new BuddyInfo("Av");
         BuddyInfo buddy2 = new BuddyInfo("Alex");
+        BuddyInfo buddy3 = new BuddyInfo("Katelyn");
 
         AddressBook addressBook = new AddressBook();
         addressBook.addBud(buddy1);
         addressBook.addBud(buddy2);
+        addressBook.addBud(buddy3);
 
         System.out.println("Address Book");
 
@@ -49,6 +51,6 @@ public class AddressBook {
         addressBook.removeBud(0);
         System.out.println("Buddy removed from address book");
 
-        addressBook.disBud(); //They're gon :(
+        addressBook.disBud(); //she gon :(
     }
 }
