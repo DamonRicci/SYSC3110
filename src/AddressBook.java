@@ -21,6 +21,15 @@ public class AddressBook {
         return null;
     }
 
+    public void reverseBud(int index) {
+        if (index >= 0 && index < bud.size()) {
+            String nameRev = this.getBud(index).getName();
+            StringBuilder sb = new StringBuilder(nameRev);
+            sb.reverse();
+            System.out.println("The last name in the list reversed is "+ sb.toString());
+        }
+    }
+
     public BuddyInfo getBud(int index) {
         if (index >= 0 && index < bud.size()) {
             return bud.get(index);
@@ -48,11 +57,13 @@ public class AddressBook {
 
         System.out.println("Buddies added to address book");
 
-        addressBook.disBud(); //Display all buds :D
+        addressBook.disBud();
 
         addressBook.removeBud(0);
         System.out.println("Buddy removed from address book");
 
-        addressBook.disBud(); //she gon :(
+        addressBook.disBud();
+
+        addressBook.reverseBud(0);
     }
 }
